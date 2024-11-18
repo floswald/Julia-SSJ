@@ -26,7 +26,7 @@ end
     p = Params()
     m = SSJ.Aiyagari(p)
 
-    @test SSJ.aggregate_labor(m) == 1.0
+    @test SSJ.aggregate_labor(m) ≈ 1.0
 
     f1 = SSJ.firm(0.05,m)
     @test f1[2].r == 0.05
